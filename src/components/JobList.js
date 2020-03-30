@@ -60,7 +60,7 @@ const JobList = () => {
       <List className={classes.root} data-testid="job-list">
         {jobs.map((user, index) => (
           <h5 key={index}>
-            <Link className={classes.link} to={`/user/${user.id}`}>
+            <Link className={classes.link} to={`/job/${user.id}`}>
               <ListItem className={classes.listItem}>
                 <ListItemAvatar>
                   <Avatar className={classes.avatar}>

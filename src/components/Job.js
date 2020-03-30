@@ -86,6 +86,9 @@ const Job = ({ match, location }) => {
                 <Typography variant="body2" color="textSecondary" component="p">
                   {job.description}
                 </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {job.employment_type}
+                </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
