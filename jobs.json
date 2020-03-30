@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "Frontend Developer",
+      "description": "Comfortable with modern JS stack, experience with React.",
+      "employment_type": "full_time"
+    },
+    {
+      "id": 2,
+      "title": "Backend Developer",
+      "description": "Comfortable with Phyton, good knowledge of databases",
+      "employment_type": "full_time"
+    },
+    {
+      "id": 3,
+      "title": "Designer",
+      "description": "Comfortable with photoshop. Having creative thinking ability",
+      "employment_type": "part_time"
+    }
+  ]
+}

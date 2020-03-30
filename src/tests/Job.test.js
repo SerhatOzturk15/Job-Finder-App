@@ -10,27 +10,6 @@ jest.mock("react-router-dom", () => ({
   })
 }));
 
-const initialState = [
-    {
-      "id": 1,
-      "title": "Frontend Developer",
-      "description": "Comfortable with modern JS stack, experience with React.",
-      "employment_type": "full_time"
-    },
-    {
-      "id": 2,
-      "title": "Backend Developer",
-      "description": "Comfortable with Phyton, good knowledge of databases",
-      "employment_type": "full_time"
-    },
-    {
-      "id": 3,
-      "title": "Designer",
-      "description": "Comfortable with photoshop. Having creative thinking ability",
-      "employment_type": "part_time"
-    }
-  ];
-
 const setup = () => {
   const match = { params: { id: 1 } }
   const component = shallow(<Job match={match} />);
@@ -51,8 +30,6 @@ describe("Job component", () => {
   });
 
   it ('Job Found Image should render', () => {
-    const match = { params: { id: 4 } }
-    const component = shallow(<Job match={match} />);
     const wrapper = component.find('[data-testid="job-not-found-image"]');
     expect(wrapper.length).toBe(1);
   });
