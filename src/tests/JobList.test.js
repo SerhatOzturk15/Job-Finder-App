@@ -15,9 +15,8 @@ describe("JobList component", () => {
     expect(wrapper.length).toBe(1);
   });
 
-  it('JobList snapshot should match', () => {
+  it("JobList snapshot should match", () => {
     const wrapper = component.find('[data-testid="job-list"]');
     expect(toJson(wrapper)).toMatchSnapshot();
-});
-
+  });
 });

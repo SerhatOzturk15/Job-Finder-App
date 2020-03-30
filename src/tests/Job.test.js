@@ -2,7 +2,6 @@ import React from "react";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 import Job from "../components/Job";
-import { mount } from 'enzyme';
 
 jest.mock("react-router-dom", () => ({
   useHistory: () => ({
@@ -11,7 +10,7 @@ jest.mock("react-router-dom", () => ({
 }));
 
 const setup = () => {
-  const match = { params: { id: 1 } }
+  const match = { params: { id: 1 } };
   const component = shallow(<Job match={match} />);
   console.log(component.debug());
   return component;
@@ -29,9 +28,8 @@ describe("Job component", () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
-  it ('Job Found Image should render', () => {
+  it("Job Found Image should render", () => {
     const wrapper = component.find('[data-testid="job-not-found-image"]');
     expect(wrapper.length).toBe(1);
   });
 });
-
