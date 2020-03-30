@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Job component Job snapshot should match 1`] = `
+<WithStyles(ForwardRef(Container))
+  data-testid="job-container"
+  maxWidth="sm"
+>
+  <WithStyles(ForwardRef(Card))
+    className="makeStyles-root-1"
+  >
+    <WithStyles(ForwardRef(CardActionArea))>
+      <WithStyles(ForwardRef(CardMedia))
+        className="makeStyles-media-2"
+        data-testid="job-not-found-image"
+        image="nojob.jpg"
+        title="Contemplative Reptile"
+      />
+      <WithStyles(ForwardRef(CardContent))>
+        <WithStyles(ForwardRef(Typography))
+          component="h2"
+          gutterBottom={true}
+          variant="h5"
+        />
+        <WithStyles(ForwardRef(Typography))
+          color="textSecondary"
+          component="p"
+          variant="body2"
+        />
+      </WithStyles(ForwardRef(CardContent))>
+    </WithStyles(ForwardRef(CardActionArea))>
+    <WithStyles(ForwardRef(CardActions))>
+      <WithStyles(ForwardRef(Button))
+        color="primary"
+        onClick={[Function]}
+        size="small"
+      >
+        Go Back
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(CardActions))>
+  </WithStyles(ForwardRef(Card))>
+</WithStyles(ForwardRef(Container))>
+`;
