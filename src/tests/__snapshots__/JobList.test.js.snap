@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JobList component JobList snapshot should match 1`] = `
+exports[`JobList component without props JobList snapshot should match 1`] = `
 <WithStyles(ForwardRef(List))
   className="makeStyles-root-1"
   data-testid="job-list"

@@ -12,7 +12,6 @@ exports[`Job component Job snapshot should match 1`] = `
       <WithStyles(ForwardRef(CardMedia))
         className="makeStyles-media-2"
         data-testid="job-not-found-image"
-        image="nojob.jpg"
         title="Contemplative Reptile"
       />
       <WithStyles(ForwardRef(CardContent))>
@@ -26,16 +25,20 @@ exports[`Job component Job snapshot should match 1`] = `
           component="p"
           variant="body2"
         />
+        <WithStyles(ForwardRef(Typography))
+          color="textSecondary"
+          component="p"
+          variant="body2"
+        />
       </WithStyles(ForwardRef(CardContent))>
     </WithStyles(ForwardRef(CardActionArea))>
     <WithStyles(ForwardRef(CardActions))>
       <WithStyles(ForwardRef(Button))
         color="primary"
+        data-testid="goBackButton"
         onClick={[Function]}
         size="small"
-      >
-        Go Back
-      </WithStyles(ForwardRef(Button))>
+      />
     </WithStyles(ForwardRef(CardActions))>
   </WithStyles(ForwardRef(Card))>
 </WithStyles(ForwardRef(Container))>

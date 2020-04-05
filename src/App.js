@@ -1,20 +1,16 @@
 import React from "react";
 import "./App.css";
-import JobList from "./components/JobList";
-import Job from "./components/Job";
-import Navbar from "./components/Navbar";
+import JobContainer from "./containers/JobContainer";
+import JobListContainer from "./containers/JobListContainer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <section className="App">
       <Router>
-        <Navbar></Navbar>
         <Switch>
-          <Route exact path="/" component={JobList} />
-          <Route
-            exact
-            path="/job/:id" component={Job} />
+          <Route exact path="/" component={JobListContainer} />
+          <Route exact path="/job/:id" component={JobContainer} />
           />
         </Switch>
       </Router>

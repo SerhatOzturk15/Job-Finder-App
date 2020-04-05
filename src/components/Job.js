@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import nojobImage from "./../nojob.jpg";
-import jobImage from "./../jobs.jpg";
-import { BASEURL } from "./../util";
 import {
   Card,
   CardActionArea,
@@ -13,43 +9,28 @@ import {
   Button,
   Typography,
   Container,
-  CircularProgress
+  CircularProgress,
 } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 500
+    maxWidth: 500,
   },
   media: {
     height: 350,
-    backgroundSize: "contain"
-  }
+    backgroundSize: "contain",
+  },
 });
 
-const Job = ({ match, location }) => {
+const Job = ({
+  isLoading,
+  job = {},
+  jobImage,
+  noJobImage,
+  goBack,
+  goBackText,
+}) => {
   const classes = useStyles();
-  const { id } = match.params;
-  const [job, setJob] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
-  const history = useHistory();
-
-  useEffect(() => {
-    setIsLoading(true);
-    fetch(`${BASEURL}/getAJob/${id}`)
-      .then(res => res.json())
-      .then(result => {
-        setJob(result.item);
-        setIsLoading(false);
-      })
-      .catch(() => {
-        setJob({});
-        setIsLoading(false);
-      });
-  }, [id]);
-
-  const goBack = () => {
-    history.goBack();
-  };
 
   return (
     <>
@@ -73,7 +54,7 @@ const Job = ({ match, location }) => {
               ) : (
                 <CardMedia
                   className={classes.media}
-                  image={nojobImage}
+                  image={noJobImage}
                   data-testid="job-not-found-image"
                   title="Contemplative Reptile"
                 />
@@ -92,8 +73,13 @@ const Job = ({ match, location }) => {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary" onClick={() => goBack()}>
-                Go Back
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => goBack()}
+                data-testid="goBackButton"
+              >
+                {goBackText}
               </Button>
             </CardActions>
           </Card>
