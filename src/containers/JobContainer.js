@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Job, Navbar } from "../components";
+import { Job } from "../components";
 import { BASEURL } from "./../util";
-import noJobImage from "./../nojob.jpg";
-import jobImage from "./../jobs.jpg";
+import noJobImage from "./../images/nojob.jpg";
+import jobImage from "./../images/jobs.jpg";
 
 const JobContainer = ({ match }) => {
   const { id } = match.params;
@@ -29,19 +29,16 @@ const JobContainer = ({ match }) => {
   };
 
   return (
-    <>
-      <Navbar title="Job Finder App" />
-      <Job
-        job={job}
-        match={match}
-        isLoading={isLoading}
-        jobImage={jobImage}
-        noJobImage={noJobImage}
-        history={history}
-        goBack={goBack}
-        goBackText={"Go Back"}
-      />
-    </>
+    <Job
+      job={job}
+      match={match}
+      isLoading={isLoading}
+      jobImage={jobImage}
+      noJobImage={noJobImage}
+      history={history}
+      goBack={goBack}
+      goBackText={"Go Back"}
+    />
   );
 };
 

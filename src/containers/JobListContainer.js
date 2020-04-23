@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { JobList, Navbar } from "../components";
+import { JobList } from "../components";
 import { BASEURL } from "./../util";
 
 const JobListContainer = () => {
@@ -16,10 +16,7 @@ const JobListContainer = () => {
   }, []);
 
   return (
-    <>
-      <Navbar title="Job Finder App" />
-      <JobList jobs={jobs} />
-    </>
+    <JobList jobs={jobs} />
   );
 };
 
